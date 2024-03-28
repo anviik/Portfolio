@@ -41,6 +41,7 @@ body {
     color: #b48a8a;
 }
 
+/* nav bar */
 .header {
     display: flex;
     justify-content: center; 
@@ -54,11 +55,11 @@ body {
     z-index: 999;
 }
 
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: center; 
     align-items: center; 
-}
+} */
 
 .navbar a {
     text-decoration: none;
@@ -390,7 +391,7 @@ section {
     top: 0;
     left: 50%;
     margin-left: -3px;
-    z-index: -1;
+    z-index: 1 !important;
     color: white;
 }
 
