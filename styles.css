@@ -66,14 +66,12 @@ body {
     color: black;
     margin: 0 10px;
     transition: color 0.3s; 
-    font-family: Arial, sans-serif; /* Replace Arial with your preferred sans-serif font */
+    font-family: Arial, sans-serif; 
     font-weight: 600; 
-    text-transform: uppercase; /* This transforms the text to title case */
+    text-transform: uppercase; 
     font-size: 15px;
-
-    /* font-size: 25px;
-    font-family: 'Caveat', cursive, 'Roboto Mono', monospace;
-    font-weight: 700; */
+    /* font-family: 'Caveat', cursive, 'Roboto Mono', monospace;
+    font-weight: 700;  */
 }
 
 .navbar a:hover {
@@ -128,7 +126,7 @@ section {
 .home {
     display: flex;
     align-items: center;
-    background-image: url('/Users/anvikudaraya/Desktop/city.jpg');
+    background-image: url('city.jpeg');
   background-size: cover; 
   background-repeat: no-repeat; 
   position: relative;
@@ -148,9 +146,9 @@ section {
     font-weight: 5;    
     color:rgb(0, 0, 0);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', fantasy; */
-    font-family: Arial, sans-serif; /* Replace Arial with your preferred sans-serif font */
+    font-family: Arial, sans-serif; 
     font-weight: 600; 
-    text-transform: uppercase; /* This transforms the text to title case */
+    text-transform: uppercase; 
     font-size: 15px;
 }
 
@@ -213,19 +211,19 @@ section {
 
 .aboutmeClass {
     flex: 1; /* Take up half of the available space */
-    padding-right: 15px; /* Add some spacing between text and photo */
+    padding-right: 15px; /* add spacing between text and photo */
 }
 
 .myImage {
     flex: 1; /* Take up half of the available space */
     display: flex;
-    justify-content: flex-end; /* Align the photo to the right */
-    align-items: center; /* Center the photo vertically */
+    justify-content: flex-end; 
+    align-items: center; 
 }
 .myImage img {
-    max-width: 300%; /* Ensure the image does not exceed its container's width */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 400px; /* Set a maximum height for the image */
+    max-width: 300%; 
+    height: auto; 
+    max-height: 400px; 
 }
 .about {
     display: flex;
@@ -233,7 +231,7 @@ section {
 }
 
 .aboutMe {
-    font-family: Arial, sans-serif; /* Replace Arial with your preferred sans-serif font */
+    font-family: Arial, sans-serif; 
     font-weight: 300; 
     font-size: 15px;
     color: white;
@@ -279,7 +277,7 @@ section {
 }
 
 .portfolio .portfolio-container .portfolio-box {
-    margin-bottom: 0rem; /* Adjust the value as needed */
+    margin-bottom: 0rem; 
 }
 
 .portfolio-box img {
@@ -325,8 +323,8 @@ section {
 
 /* font on projects */
 .portfolio-layer p { 
-    font-size: 5rem;
-    margin: .3rem 0 1rem;
+    font-size: 2rem;
+    margin: .1rem 1rem;
 }
 
 /* .portfolio-layer a {
