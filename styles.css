@@ -11,12 +11,12 @@ html, body {
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: Arial, sans-serif; 
-    /* font-weight: 600;  */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     font-size: 15px;
     color:rgb(0, 0, 0)
 }
- 
+
+
 /* Anvi Kudaraya */
 .home-content h3{ 
     font-size: 75px;;
@@ -41,7 +41,6 @@ body {
     color: #b48a8a;
 }
 
-/* nav bar */
 .header {
     display: flex;
     justify-content: center; 
@@ -53,13 +52,12 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
+    transition: background-color 0.3s; /* Add transition for smooth color change */
 }
 
-/* .navbar {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-} */
+.header.scrolled {
+    background-color: black; /* Change the background color when scrolled */
+}
 
 .navbar a {
     text-decoration: none;
@@ -74,15 +72,10 @@ body {
     font-weight: 700;  */
 }
 
-.navbar a:hover {
-    color: white;
-}
-
-
-.navbar a:hover {
-    color: white;
-}
-
+.navbar a:hover, 
+.navbar a.active {
+    color: #ffffff;
+} 
 
 #darkMode-icon {
     color: #ffffff;
@@ -100,11 +93,6 @@ body {
     background: transparent;
 }
 
-.header.sticky .navbar a::before{
-    background: #c148df;
-    opacity: 1;
-
-}
 
 #darkMode-icon {
     font-size: 2.4rem;
@@ -126,7 +114,7 @@ section {
 .home {
     display: flex;
     align-items: center;
-    background-image: url('city.jpeg');
+    background-image: url('flower.jpeg');
   background-size: cover; 
   background-repeat: no-repeat; 
   position: relative;
@@ -410,14 +398,18 @@ section {
 }
 
 .text-box h2 {
-    font-weight: 300;
+    font-weight: 800;
     color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    
 }
 
 .text-box small {
     display: inline-block;
     margin-bottom: 15px;
     color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .left-container-arrow {
@@ -461,7 +453,59 @@ section {
     animation-delay: 3s;
 }
 
-
+/* contact  */
+.contact {
+    /* background-color: lavenderblush; */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    
+}
+.feedback-form  {
+    width: 300%; 
+    background: #f5ebeb;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    
+}
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    width: 94%; /* Matches the input width */
+    margin-left: auto;
+    margin-right: auto;
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 90%; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.feedback-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+.feedback-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Centers the button within the flex container */
+}
+.feedback-form button:hover {
+    background-color: #555;
+}
 
 /* 
 .services{

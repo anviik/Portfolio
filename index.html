@@ -24,7 +24,7 @@
     <!-- header design -->
     <header class="header">
         <nav class="navbar">
-            <a href="#home">HOME</a>
+            <a href="#home" class="active">HOME</a>
             <a href="#about">ABOUT</a>
             <a href="#resume">RESUME</a>
             <a href="#portfolio">PORTFOLIO</a>
@@ -57,12 +57,11 @@
     <section class="about" id="about">
         <div class="aboutmeClass">
         <h2 class="heading"> About me</h2>
-        <p class="aboutMe">Hi my name is Anvi Kudaraya and I am a first year at the 
-            University of California, Merced. I am majoring in Computer Science + Engineering 
-            and am looking for any open oppurtunities for internships. I enjoy programming especially
-            the desing aspect of it as I get to work with new aesthetics. I also like to 
-            explore new coding lanaguges and finding ways algorithms can solve problems around us. 
-            
+        <p class="aboutMe">Hi my name is Anvi Kudaraya and I am a second year (junior standing) at the 
+            University of California, Merced. I am majoring in Computer Science + Engineering and minoring
+            in Cognitive Science. My interest in cognitive science has grown throughout the past year as I 
+            learned more about its intersection with technology, especially with AI/ML, as well as UI/UX design.  
+            I also like to explore new coding lanaguges and finding ways algorithms can solve problems around us. 
             Outside of coding, I enjoy going out with my friends, doing art, trying new things 
             (especially food) and meeting new people. I hope to find internships based on my 
             interest of software engineering/product designing and ui/ux desingning
@@ -168,11 +167,39 @@
             </div>
         </div>
 
-    <!-- </section>
+        <section class="contact" id="contact">
+            <div class="feedback-form">
+              <form action="https://formspree.io/f/mbjnkkgb" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                <label for="message">Questions or comments:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </section>
 
-    <section class="contact" id="contact">
-        
-    </section> -->
+          <script src="script.js"></script>
+          <!-- <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              var scrollLinks = document.querySelectorAll('.nav-link');
+              scrollLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                  event.preventDefault();
+                  var targetId = this.getAttribute('href').substring(1);
+                  var targetSection = document.getElementById(targetId);
+                  if (targetSection) {
+                    targetSection.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                });
+              });
+            });
+          </script> -->
 
 
     <!-- services -->
