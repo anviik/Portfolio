@@ -19,7 +19,29 @@
     <script src="script.js"></script> 
 </head>
 
-<body>
+<body>        
+        <div class="text-container">
+          </div>
+          <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
+            </div>
+          </div>
+            <script type="module" src="main.ts"></script>
 
     <!-- header design -->
     <header class="header">
@@ -29,6 +51,7 @@
             <a href="#resume">RESUME</a>
             <a href="#portfolio">PORTFOLIO</a>
             <a href="#contact">CONTACT</a>
+            <a href="#extra">EXTRA</a>
         </nav>
         <div class="bx bx-moon" id="darkMode-icon"></div>
     </header>
@@ -37,7 +60,6 @@
     <section class="home" id="home">
         <div class="home-content">
             <h3>Anvi Kudaraya</h3>
-            <!-- <p>egfuwufwefwhfiowiqofuqoufieuxfmuf</p> -->
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/anvi-kudaraya-ba116320b/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
                 <a href="https://github.com/anviik" target="_blank"><i class='bx bxl-github'></i></a>
@@ -45,13 +67,6 @@
             </div>
 
         </div>
-
-        <div class="profession-container">
-            <div class="profession-box">
-                <div class="profession"></div>
-            </div>
-        </div>
-
     </section>
 
     <section class="about" id="about">
@@ -121,52 +136,69 @@
     </section>
 
 
+
+
     <!-- projects -->
+   
+
+
+
     <section class="portfolio" id="portfolio">
-        <h3 class="heading">Projects</h3>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="gumroad.jpeg" alt="">
-                <div class="portfolio-layer">
-                    <!-- <h4>Web Design</h4> -->
-                    <p>Program that extracts dates and stats from large PDFs 
-                    </p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    
-                </div>
+    <div class="portfolio">
+        <div class="slider">
+            <div class="slides" style="--img: url('hackathon.jpeg')">
+                <div class="portfolio-content"></div>
             </div>
-    
-            <div class="portfolio-box">
-                <img src="hackathon.jpeg" alt="">
-                <div class="portfolio-layer">
-                    <!-- <h4>Web Design</h4> -->
-                    <p>Website to support wellness, includes excerices, blog, finding resources near you
-                    </p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
+            <div class="slides" style="--img: url('numbertiles.jpeg')">
+                <div class="portfolio-content"></div>
             </div>
-    
-            <div class="portfolio-box">
-                <img src="numbertiles.jpeg" alt="">
-                <div class="portfolio-layer">
-                    <!-- <h4>Web Design</h4> -->
-                    <p>Number tiles game with customizable grids
-                    </p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
+            <div class="slides" style="--img: url('Wordle.jpeg')">
+                <div class="portfolio-content"></div>
             </div>
-            <div class="portfolio-box">
-                <img src="Wordle.jpeg" alt="">
-                <div class="portfolio-layer">
-                    <!-- <h4>Web Design</h4> -->
-                    <p>Terminal wordle game, includes repsonsive keyboard and stats summary
-                    </p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
+            <div class="slides" style="--img: url('gumroad.jpeg;')">
+                <div class="portfolio-content"></div>
             </div>
         </div>
+        <div class="portfolio-buttons">
+            <span class="portfolio-prev"></span>
+            <span class="portfolio-next"></span>
+        </div>
+    </div>
 
+    <script>
+        let next = document.querySelector('.portfolio-next');
+let prev = document.querySelector('.portfolio-prev');
+let slider = document.querySelector('.slider');
+
+next.addEventListener('click', function(){
+    let slides = document.querySelectorAll('.slides');
+    slider.appendChild(slides[0]);
+})
+
+prev.addEventListener('click', function(){
+    let slides = document.querySelectorAll('.slides');
+    slider.prepend(slides[slides.length - 1]);
+})
+    </script>
+</section>
+
+<section class="contact" id="contact">
+    <div class="con">
+</section>
+
+
+
+
+
+
+<section class="extra" id="extra">
+    <div>
+        
+    </div>
+</section>
+
+
+<!-- 
         <section class="contact" id="contact">
             <div class="feedback-form">
               <form action="https://formspree.io/f/mbjnkkgb" method="POST">
@@ -179,31 +211,12 @@
                 <button type="submit">Send</button>
               </form>
             </div>
-          </section>
+          </section> -->
 
           <script src="script.js"></script>
-          <!-- <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              var scrollLinks = document.querySelectorAll('.nav-link');
-              scrollLinks.forEach(function(link) {
-                link.addEventListener('click', function(event) {
-                  event.preventDefault();
-                  var targetId = this.getAttribute('href').substring(1);
-                  var targetSection = document.getElementById(targetId);
-                  if (targetSection) {
-                    targetSection.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start'
-                    });
-                  }
-                });
-              });
-            });
-          </script> -->
 
-
-    <!-- services -->
-    <!-- <section class="services" id="services">
+    <!-- services
+    <section class="services" id="services">
         <h2 class="heading"> My Services</h2>
         <div class = "services-container">
             <div class = "services-box">
@@ -236,7 +249,7 @@
                 <a href='#' class="btn">Read More</a>
             </div>
         </div>
-    </section> -->
+    </section>  -->
 
 
     <script src="js/script.js"></script>
